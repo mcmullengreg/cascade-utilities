@@ -1,0 +1,48 @@
+## Import all known shortcode Formats
+#set ( $folder = $_.locateFolder("shortcodes", "_V5") )
+#set ( $codes = [] )
+#set ( $shortcodes = [] )
+#foreach ( $child as $folder.children )
+    #set ( $formatPath = "site://_V5/" + $child.path )
+    #if ( $child.name != "default" || $child.name != "_template" )
+        #import($formatPath)
+        #set ( $null = $codes.add($child.name) )
+    #end
+#end
+#macro ( findCodes $contentString )
+  #set ( $startPosPar = $contentString.indexOf('[') )
+  #if ( $startPosPar > 0 )
+    #set ( $scFull = "#strByStartEnd($contentString, '[', ']')" )
+    #set ( $scName = $scFull.split("\s") )
+    #set ( $scName = $scName[0] )
+    #if ( $codes.contains($scName) )
+      #set ( $replace = "["+$scFull+"]" )
+      #set ( $new = "{"+$scFull+"}" )
+      #set ( $contentReplace = $contentString.replace($replace,$new) )
+      #set ( $void = $shortcodes.add($new) )
+      #set ( $wysiwyg = $contentReplace )
+      #findCodes($wysiwyg)
+    #else
+      #foreach ( $item in $shortcodes )
+        #do_shortcode($item, $wysiwyg)
+      #end
+    #end
+  #else
+    #foreach ( $item in $shortcodes )
+      #do_shortcode($item, $wysiwyg)
+    #end
+  #end
+#end
+#*
+Macro to get a substring by a start and end string, e.g.
+  Full String           Start String    End String  Return
+  [getBlock settings]   [getBlock       ]           settings
+  attribute="your/path" attribute="     "           your/path
+*#
+#macro ( strByStartEnd $contentString $startString $endString )
+  #set ( $startPos = $contentString.indexOf($startString) )
+  #if ( $startPos > 0 )
+    #set ( $startPosExc = $startPos + $startString.length() )
+    $contentString.substring($startPosExc, $contentString.indexOf($endString, $startPosExc))
+  #end
+#end

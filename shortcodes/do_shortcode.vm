@@ -1,0 +1,15 @@
+#*
+  * Macro do_shortcode ( $shortcodeName, $content )
+  * Processes the actual shortcode, and attaches the macro to it
+*#
+#macro ( do_shortcode $shortcodeName, $content )
+    #if ( $shortcodeName.contains("shortCodeName") )
+      #shortcodeMacro($content)
+    ## This entry is an example, and should never be uncommented
+    ##elseif ( $shortcodeName.contains("_template") )
+      ##_template($content)
+    #else
+        #set ( $wysiwyg = $content )
+        ## I'm the else...I run if no shortcodes exist.
+    #end
+#end
