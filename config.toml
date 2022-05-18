@@ -1,6 +1,6 @@
 ## For GH Pages
 publishDir = "docs"
-baseURL = 'http://mcmullengreg.github.io/cascade-utilities/'
+baseURL = 'https://mcmullengreg.github.io/cascade-utilities/'
 languageCode = 'en-us'
 title = 'Cascade Utilities'
 theme = "ace-documentation"
