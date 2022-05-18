@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shortcodes on Cascade Utilities</title>
+    <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/</link>
+    <description>Recent content in Shortcodes on Cascade Utilities</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://mcmullengreg.github.io/cascade-utilities/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do Shortcode</title>
+      <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/</guid>
+      <description>do_shortcode is the most basic macro within the entire set. While there are ways to enhance this functionality, the below sample will get you started. Copy    #*  * Macro do_shortcode ( $shortcodeName, $content )  * Processes the actual shortcode, and attaches the macro to it *# #macro ( do_shortcode $shortcodeName, $content )  #if ( $shortcodeName.contains(&amp;#34;shortcodeName&amp;#34;) )  #shortcode($content)  ## This entry is an example, and should never be uncommented  ##elseif ( $shortcodeName.</description>
+    </item>
+    
+    <item>
+      <title>Find Codes</title>
+      <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/default/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/default/</guid>
+      <description>The default file contains find_shortcode and a utility macro called strByStartEnd. find_shortcode is the actual workhorse, but wouldn&amp;rsquo;t be possible without the utility macro also included in this file. Copy    ## Import all known shortcode Formats #set ( $siteName = &amp;#34;YourSiteName&amp;#34; ) #set ( $folder = $_.locateFolder(&amp;#34;shortcodes&amp;#34;, $siteName) ) #set ( $codes = [] ) #set ( $shortcodes = [] ) ## Import the shortcode files #foreach ( $child as $folder.</description>
+    </item>
+    
+    <item>
+      <title>Shortcode Template</title>
+      <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/template/</guid>
+      <description>This template file breaks down the basic code necessary for writing your first macro. Copy    #*  This page serves as a template and guide to developing and/or editing new shortcodes  Shortcodes should all be stored inside of the same site and folder, e.g. /macros/shortcodes/{name}.   The shortcode, file and macro names should match exactly. The name is used as a check to:  1. Import the macro file  2.</description>
+    </item>
+    
+  </channel>
+</rss>

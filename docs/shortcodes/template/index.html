@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://mcmullengreg.github.io/cascade-utilities/shortcodes/template/">
+
+    <title>
+        
+        Shortcode Template | Cascade Utilities
+        
+    </title>
+
+    
+    <link href="https://mcmullengreg.github.io/cascade-utilities/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://mcmullengreg.github.io/cascade-utilities/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/cascade-utilities">
+                
+                Cascade Utilities
+            </a>
+        </div>
+        
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+              <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/mcmullengreg/cascade-utilities" >
+                                  <span class='fab fa-github'></span>
+                                </a>
+                            </li>
+              </ul>
+            </div>
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            <form class="form-inline my-2 my-lg-0 searchbox">
+                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/cascade-utilities/shortcodes/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/cascade-utilities/shortcodes/"><h6>Shortcodes</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/cascade-utilities/shortcodes/do_shortcode/" class="nav-item my-1">
+                
+                 <a href="/cascade-utilities/shortcodes/do_shortcode/" class="nav-link p-0">
+                    Do Shortcode
+                </a>
+        </li>
+        <li data-nav-id="/cascade-utilities/shortcodes/default/" class="nav-item my-1">
+                
+                 <a href="/cascade-utilities/shortcodes/default/" class="nav-link p-0">
+                    Find Codes
+                </a>
+        </li>
+        <li data-nav-id="/cascade-utilities/shortcodes/template/" class="nav-item my-1 active">
+                
+                 <a href="/cascade-utilities/shortcodes/template/" class="nav-link p-0">
+                    Shortcode Template
+                </a>
+        </li>
+        </ul>
+    </li>
+    <li data-nav-id="/cascade-utilities/svg-sprite/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/cascade-utilities/svg-sprite/"><h6>SVG Sprite</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/cascade-utilities/svg-sprite/code/" class="nav-item my-1">
+                
+                 <a href="/cascade-utilities/svg-sprite/code/" class="nav-link p-0">
+                    Velocity Code
+                </a>
+        </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents"></nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>Shortcode Template</h1>
+
+<p class="lead">
+    This template file breaks down the basic code necessary for writing your first macro.
+</p>
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+<div class="position-relative">
+    <div class="position-absolute" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_566dcb7fbb">
+        Copy
+        </button>
+    </div>
+    <div id="clipboard_566dcb7fbb">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#<span style="color:#ff79c6">*</span>
+</span></span><span style="display:flex;"><span>  This page serves as a template and guide to developing and<span style="color:#ff79c6">/</span>or editing <span style="color:#ff79c6">new</span> shortcodes
+</span></span><span style="display:flex;"><span>  Shortcodes should all be stored inside of the same site and folder<span style="color:#ff79c6">,</span> e<span style="color:#ff79c6">.</span><span style="color:#50fa7b">g</span><span style="color:#ff79c6">.</span> <span style="color:#ff79c6">/</span>macros<span style="color:#ff79c6">/</span>shortcodes<span style="color:#ff79c6">/{</span>name<span style="color:#ff79c6">}.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  The shortcode<span style="color:#ff79c6">,</span> file and macro names should match exactly<span style="color:#ff79c6">.</span> The name is used as a check to<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>  1<span style="color:#ff79c6">.</span> Import the macro file
+</span></span><span style="display:flex;"><span>  2<span style="color:#ff79c6">.</span> <span style="color:#f1fa8c">&#34;Name&#34;</span> the macro itself
+</span></span><span style="display:flex;"><span>  3<span style="color:#ff79c6">.</span> Trigger a check <span style="color:#ff79c6">for</span> which macro to <span style="color:#50fa7b">run</span> <span style="color:#ff79c6">(</span>inside of do_shortcode<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  e<span style="color:#ff79c6">.</span><span style="color:#50fa7b">g</span><span style="color:#ff79c6">.</span> #macro form <span style="color:#ff79c6">;</span> shortcode is <span style="color:#ff79c6">[</span>form id<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#34;</span><span style="color:#ff79c6">];</span> filename is form
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Basic structure<span style="color:#ff79c6">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> Import the find_shortcode file<span style="color:#ff79c6">,</span> <span style="color:#ff79c6">this</span> allows you to search <span style="color:#ff79c6">for</span> a named shortcode<span style="color:#ff79c6">.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> Write your macro<span style="color:#ff79c6">/</span>shortcode
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> Use <span style="color:#50fa7b">$contentString</span> <span style="color:#ff79c6">(</span>or similar<span style="color:#ff79c6">)</span> to pass in the wysiwyg editor content<span style="color:#ff79c6">.</span> This is all that&#39;s needed to be passed in
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> Ensure you write out to $wysiwyg at the end of it <span style="color:#50fa7b">all</span> <span style="color:#ff79c6">(</span>setting the WYSIWYG editor to $wysiwyg<span style="color:#ff79c6">,</span> regardless of DD name or structured data is ideal<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">-</span> Update do_shortcode with your <span style="color:#ff79c6">new</span> entry
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span>#
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#macro <span style="color:#ff79c6">(</span> _template $contentString <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  ## Gets the starting position of the shortcode
+</span></span><span style="display:flex;"><span>  ## Uses the curly brace<span style="color:#ff79c6">,</span> due to processing occurring higher in the chain
+</span></span><span style="display:flex;"><span>  #set <span style="color:#ff79c6">(</span> $startPosPar <span style="color:#ff79c6">=</span> $contentString<span style="color:#ff79c6">.</span><span style="color:#50fa7b">indexOf</span><span style="color:#ff79c6">(</span>&#39;<span style="color:#ff79c6">{</span>_template&#39;<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  ## IndexOf uses <span style="color:#ff79c6">-</span>1 <span style="color:#ff79c6">if</span> an item is not found<span style="color:#ff79c6">;</span> 0 or above <span style="color:#ff79c6">if</span> it is
+</span></span><span style="display:flex;"><span>  #<span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span> $startPosPar <span style="color:#ff79c6">&gt;</span> 0 <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Uses the String by Start and End macro to get the start and end of the shortcode
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $shortCode <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;#strByStartEnd($contentString, &#39;{form&#39;, &#39;}&#39;)&#34;</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Sets the index of the closing brace <span style="color:#ff79c6">for</span> the shortcode
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $endPos <span style="color:#ff79c6">=</span> $contentString<span style="color:#ff79c6">.</span><span style="color:#50fa7b">indexOf</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#39;}&#39;</span><span style="color:#ff79c6">,</span> $startPosPar<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $endPos <span style="color:#ff79c6">=</span> $endPos <span style="color:#ff79c6">+</span> 1 <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Gets the full shortcode entity <span style="color:#ff79c6">for</span> additional processing
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $fullShortCode <span style="color:#ff79c6">=</span> $contentString<span style="color:#ff79c6">.</span><span style="color:#50fa7b">substring</span><span style="color:#ff79c6">(</span>$startPosPar<span style="color:#ff79c6">,</span> $endPos<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Start processing additional <span style="color:#50fa7b">attributes</span> <span style="color:#ff79c6">(</span>use as many as needed <span style="color:#ff79c6">for</span> your shortcode<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## The ending attribute<span style="color:#ff79c6">,</span> typically a <span style="color:#8be9fd">double</span> <span style="color:#50fa7b">quote</span> <span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    #set ( $endAtt = &#39;&#34;</span>&#39; <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Your attributes<span style="color:#ff79c6">,</span> could be done differently<span style="color:#ff79c6">,</span> but <span style="color:#ff79c6">this</span> ensures we know what we get
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $attStart1 <span style="color:#ff79c6">=</span> &#39;att1<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;&#39; )
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    #set ( $attVal1   = &#34;</span>#strByStartEnd<span style="color:#ff79c6">(</span>$shortCode<span style="color:#ff79c6">,</span> $attStart1<span style="color:#ff79c6">,</span> $endAtt<span style="color:#ff79c6">)</span><span style="color:#f1fa8c">&#34; )
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    #set ( $attStart2 = &#39;att2=&#34;</span>&#39; <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $attVal2   <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;#strByStartEnd($shortCode, $attStart2, $endAtt)&#34;</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## After getting all of your values<span style="color:#ff79c6">,</span> you can then start building whatever code is needed<span style="color:#ff79c6">.</span> It&#39;s recommend that you build it as a string<span style="color:#ff79c6">,</span> and replace whatever values are needed<span style="color:#ff79c6">.</span>
+</span></span><span style="display:flex;"><span>    ## The code <span style="color:#ff79c6">{</span>att1<span style="color:#ff79c6">},</span> <span style="color:#ff79c6">{</span>att2<span style="color:#ff79c6">}</span> are placeholders <span style="color:#ff79c6">for</span> the real content we want dropped in<span style="color:#ff79c6">.</span>
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $embedCode <span style="color:#ff79c6">=</span> &#39;<span style="color:#ff79c6">&lt;</span>div id<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;{att1}&#34;</span><span style="color:#ff79c6">&gt;{</span>att2<span style="color:#ff79c6">}&lt;/</span>div<span style="color:#ff79c6">&gt;</span>&#39; <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## If you have multiple instances of a replace<span style="color:#ff79c6">,</span> use replaceAll
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $embedCode <span style="color:#ff79c6">=</span> $embedCode<span style="color:#ff79c6">.</span><span style="color:#50fa7b">replace</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;\{att1\}&#34;</span><span style="color:#ff79c6">,</span> $attVal1<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $embedCode <span style="color:#ff79c6">=</span> $embedCode<span style="color:#ff79c6">.</span><span style="color:#50fa7b">replace</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;\{att2\}&#34;</span><span style="color:#ff79c6">,</span> $attVal2<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>    ## Replace the HTML content with your updated $embedCode
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $wysiwyg <span style="color:#ff79c6">=</span> $contentString<span style="color:#ff79c6">.</span><span style="color:#50fa7b">replace</span><span style="color:#ff79c6">(</span>$fullShortCode<span style="color:#ff79c6">,</span> $embedCode<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ## Don&#39;t forget to update do_shortcode with a <span style="color:#ff79c6">new</span> elseif entry
+</span></span><span style="display:flex;"><span>  #<span style="color:#ff79c6">else</span> ## Nothing was found<span style="color:#ff79c6">,</span> just pass it <span style="color:#50fa7b">through</span> <span style="color:#ff79c6">(</span>ensures we don&#39;t <span style="color:#ff79c6">try</span> to process something that doesn&#39;t need it <span style="color:#ff79c6">).</span> Also sets the $wysiwyg variable to be output on the desired content format
+</span></span><span style="display:flex;"><span>    #set <span style="color:#ff79c6">(</span> $wysiwyg <span style="color:#ff79c6">=</span> $contentString <span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  #end
+</span></span><span style="display:flex;"><span>#end
+</span></span></code></pre></div>
+    </div>
+</div>
+
+
+
+
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Read more</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/cascade-utilities/shortcodes/default/" title="Find Codes"><i class="fas fa-chevron-left p-1"></i>Find Codes</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/cascade-utilities/svg-sprite/" title="SVG Sprite">SVG Sprite<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://mcmullengreg.github.io/cascade-utilities/lib/jquery.min.js"></script> 
+<script src="https://mcmullengreg.github.io/cascade-utilities/lib/popper.min.js"></script> 
+
+<script src="https://mcmullengreg.github.io/cascade-utilities/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/cascade-utilities/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/cascade-utilities/plugins/auto-complete.js"></script>
+<link href="/cascade-utilities/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/mcmullengreg.github.io\/cascade-utilities\/";
+  
+</script>
+<script type="text/javascript" src="/cascade-utilities/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/cascade-utilities/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>

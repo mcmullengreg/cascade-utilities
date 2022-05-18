@@ -1,7 +1,6 @@
 +++
 title = "SVG Sprite"
 description = ""
-weight = 1
 
 +++
 
