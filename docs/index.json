@@ -1,34 +1,34 @@
 [
 {
-	"uri": "http://localhost:1313/svg-sprite/",
+	"uri": "http://mcmullengreg.github.io/cascade-utilities/svg-sprite/",
 	"title": "SVG Sprite",
 	"tags": null,
 	"description": "",
 	"content": "This script helps take a folder of SVG files and combines them into a single SVG, to be used as a Sprite. The files can live anywhere on your site. In this example we are also using a default object called $framework to pull in the location of the framework site and/or folder. Sample Structure Site://Name │ └───images │ └───icons │ │ file.svg │ │ file2.svg │ │ ... │ └───formats  └───svg-sprite.vm Usage Setup your template to utilize this format as a region, or import it as you see fit. The first variable finds the location of the SVGs to build out the sprite. Set your default site as you see fit.\n#set ( $icons = $_.locateFolder(\u0026#34;/path-to/svgs\u0026#34;, $svgSite) ) We then loop through the children and utilize the #cleanSVG() macro to clean the SVG items, customize as you see fit, ensuring we keep the viewBox while swapping the svg element for symbol.\nAt the moment, SVG\u0026rsquo;s should be placed into your Cascade CMS instance without comments. Comments are not filtered out, but could be added to the list in your installation.\nID\u0026rsquo;s of the SVG sprite are based on the assets .label, lcased. Filenames are not stripped if Display Name or Title are not used. Therefore the default name could be icon-name-svg.\nExample SVG \u0026lt;svg xmlns=\u0026#34;***\u0026#34; viewBox=\u0026#34;***\u0026#34; ...\u0026gt;  \u0026lt;path|group|etc\u0026gt; \u0026lt;/svg\u0026gt; Using the Sprite To use the sprite, you\u0026rsquo;ll use the \u0026lt;use xlink:href=\u0026quot;#icon-name\u0026quot;\u0026gt;\u0026lt;/use\u0026gt;. Cascade CMS doesn\u0026rsquo;t like this code, so make sure to wrap it with a #protect.\n\u0026lt;svg class=\u0026#34;whatever\u0026#34;\u0026gt;  \u0026lt;!--#protect\u0026lt;use xlink:href=\u0026#34;#icon-name\u0026#34;\u0026gt;\u0026lt;/use\u0026gt;#protect--\u0026gt; \u0026lt;/svg\u0026gt; Resources  A Pretty Good SVG Icon System Inline SVG\u0026hellip;Cached Why Inline SVG is Best SVG How to Use SVG Image Sprites 5 Gotchas You\u0026rsquo;re Gonna Face Getting Inline SVG Into Production  "
 },
 {
-	"uri": "http://localhost:1313/svg-sprite/code/",
+	"uri": "http://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/",
 	"title": "Velocity Code",
 	"tags": null,
 	"description": "",
 	"content": "The below script may be used as is, see svg-sprite for more details. Copy    #import(\u0026#34;_versioning/_defaults\u0026#34;) #set ( $icons = $_.locateFolder(\u0026#34;/global-assets/social-icons\u0026#34;, $framework.get(\u0026#34;site\u0026#34;)) ) \u0026lt;svg xmlns=\u0026#34;http://www.w3.org/2000/svg\u0026#34;\u0026gt; #foreach ( $icon in $icons.getChildren() )  #cleanSVG($icon) #end \u0026lt;/svg\u0026gt; #macro ( cleanSVG $icon )  #set ( $iconId = $icon.label.toLowerCase().replaceAll(\u0026#34;\\.\u0026#34;, \u0026#34;_\u0026#34; ) )  #set ( $icon = $icon.text )  #set ( $viewBox = \u0026#39;viewBox=\u0026#34;\u0026#39;) #set ( $startPos = $icon.indexOf($viewBox) ) #if ( $startPos \u0026gt; 0 ) #set ( $startPosExc = $startPos + $viewBox.length() ) #set ( $viewBoxValue = $icon.substring($startPosExc, $icon.indexOf(\u0026#39;\u0026#34;\u0026#39;, $startPosExc)) )  #end  #set ( $symbol = \u0026#39;\u0026lt;symbol viewBox=\u0026#34;\u0026#39; + ${viewBoxValue} + \u0026#39;\u0026#34; id=\u0026#34;\u0026#39;+ ${iconId} +\u0026#39;\u0026#34;\u0026#39; )  #set ( $icon = $icon.replaceAll(\u0026#34;\u0026lt;(/?)svg(.*\\s.*)?\u0026gt;\u0026#34;, \u0026#39;\u0026lt;$1symbol\u0026gt;\u0026#39;) )  #set ( $icon = $icon.replaceAll(\u0026#34;\u0026lt;title\u0026gt;(.*?)\u0026lt;/title\u0026gt;\u0026#34;, \u0026#34;\u0026#34;) )  #set ( $icon = $icon.replace(\u0026#34;\u0026lt;symbol\u0026#34;, $symbol) )  $icon #end    "
 },
 {
-	"uri": "http://localhost:1313/",
+	"uri": "http://mcmullengreg.github.io/cascade-utilities/",
 	"title": "Cascade Utilities",
 	"tags": null,
 	"description": "",
 	"content": "Documentation for various utilities for use within Cascade CMS by Hannon Hill.\nYour mileage may vary when utilizing any of this code. Use at your own risk.\nCurrent Projects   SVG Sprites  A way to organize and inline your icons within a simple Cascade Folder. SVG Sprites »      "
 },
 {
-	"uri": "http://localhost:1313/categories/",
+	"uri": "http://mcmullengreg.github.io/cascade-utilities/categories/",
 	"title": "Categories",
 	"tags": null,
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://localhost:1313/tags/",
+	"uri": "http://mcmullengreg.github.io/cascade-utilities/tags/",
 	"title": "Tags",
 	"tags": null,
 	"description": "",

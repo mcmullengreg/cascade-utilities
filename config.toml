@@ -1,4 +1,6 @@
-baseURL = 'http://localhost:1313/'
+## For GH Pages
+publishDir = "docs"
+baseURL = 'http://mcmullengreg.github.io/cascade-utilities/'
 languageCode = 'en-us'
 title = 'Cascade Utilities'
 theme = "ace-documentation"
