@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/svg-sprite/index.xml" title="Cascade Utilities" />
+    <link rel="canonical" href="http://localhost:1313/svg-sprite/">
+
+    <title>
+        
+        SVG Sprite | Cascade Utilities
+        
+    </title>
+
+    
+    <link href="http://localhost:1313/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/">
+                
+                Cascade Utilities
+            </a>
+        </div>
+        
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMainCollapse">
+              <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/mcmullengreg/cascade-utilities" >
+                                  <span class='fab fa-github'></span>
+                                </a>
+                            </li>
+              </ul>
+            </div>
+    </div>
+    <div class="feed-icons">
+            <a href="http://localhost:1313/svg-sprite/index.xml"><img src="/img/feed-icon.svg" alt="RSS feed" /></a>
+        </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            <form class="form-inline my-2 my-lg-0 searchbox">
+                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/svg-sprite/" class="nav-item my-1 parent active haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/svg-sprite/"><h6>SVG Sprite</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/svg-sprite/code/" class="nav-item my-1">
+                
+                 <a href="/svg-sprite/code/" class="nav-link p-0">
+                    Velocity Code
+                </a>
+        </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sample-structure">Sample Structure</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#example-svg">Example SVG</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-the-sprite">Using the Sprite</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>SVG Sprite</h1>
+
+<p class="lead">
+    This script helps take a folder of SVG files and combines them into a single SVG, to be used as a Sprite. The files can live anywhere on your site. In this example we are also using a default object called <code>$framework</code> to pull in the location of the framework site and/or folder.
+</p>
+
+<h2 id="sample-structure">Sample Structure</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Site://Name
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>└───images
+</span></span><span style="display:flex;"><span>│   └───icons
+</span></span><span style="display:flex;"><span>│       │   file.svg
+</span></span><span style="display:flex;"><span>│       │   file2.svg
+</span></span><span style="display:flex;"><span>│       │   ...
+</span></span><span style="display:flex;"><span>│
+</span></span><span style="display:flex;"><span>└───formats
+</span></span><span style="display:flex;"><span>    └───svg-sprite.vm
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Setup your template to utilize this format as a region, or import it as you see fit. The first variable finds the location of the SVGs to build out the sprite. Set your default site as you see fit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>#set ( $icons = $_.locateFolder(&#34;/path-to/svgs&#34;, $svgSite) )
+</span></span></code></pre></div><p>We then loop through the children and utilize the <code>#cleanSVG()</code> macro to clean the SVG items, customize as you see fit, ensuring we keep the viewBox while swapping the <code>svg</code> element for <code>symbol</code>.</p>
+<p>At the moment, SVG&rsquo;s should be placed into your Cascade CMS instance <em>without</em> comments. Comments are not filtered out, but could be added to the list in your installation.</p>
+<p>ID&rsquo;s of the SVG sprite are based on the assets <code>.label</code>, lcased. Filenames are not stripped if Display Name or Title are not used. Therefore the default name could be <code>icon-name-svg</code>.</p>
+<h3 id="example-svg">Example SVG</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">svg</span> <span style="color:#50fa7b">xmlns</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;***&#34;</span> <span style="color:#50fa7b">viewBox</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;***&#34;</span> ...&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">path</span>|<span style="color:#50fa7b">group</span>|<span style="color:#50fa7b">etc</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">svg</span>&gt;
+</span></span></code></pre></div><h2 id="using-the-sprite">Using the Sprite</h2>
+<p>To use the sprite, you&rsquo;ll use the <code>&lt;use xlink:href=&quot;#icon-name&quot;&gt;&lt;/use&gt;</code>. Cascade CMS doesn&rsquo;t like this code, so make sure to wrap it with a <code>#protect</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">svg</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;whatever&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">&lt;!--#protect&lt;use xlink:href=&#34;#icon-name&#34;&gt;&lt;/use&gt;#protect--&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">svg</span>&gt;
+</span></span></code></pre></div><h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://css-tricks.com/pretty-good-svg-icon-system/">A Pretty Good SVG Icon System</a></li>
+<li><a href="https://css-tricks.com/inline-svg-cached/">Inline SVG&hellip;Cached</a></li>
+<li><a href="https://css-tricks.com/inline-svg-best-svg/">Why Inline SVG is Best SVG</a></li>
+<li><a href="https://www.sitepoint.com/use-svg-image-sprites/">How to Use SVG Image Sprites</a></li>
+<li><a href="https://css-tricks.com/gotchas-on-getting-svg-into-production/">5 Gotchas You&rsquo;re Gonna Face Getting Inline SVG Into Production</a></li>
+</ul>
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Read more</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/" title="Cascade Utilities"><i class="fas fa-chevron-left p-1"></i>Cascade Utilities</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/svg-sprite/code/" title="Velocity Code">Velocity Code<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="http://localhost:1313/lib/jquery.min.js"></script> 
+<script src="http://localhost:1313/lib/popper.min.js"></script> 
+
+<script src="http://localhost:1313/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/plugins/auto-complete.js"></script>
+<link href="/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "http:\/\/localhost:1313\/";
+  
+</script>
+<script type="text/javascript" src="/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>
