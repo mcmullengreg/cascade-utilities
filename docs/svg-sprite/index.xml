@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SVG Sprite on Cascade Utilities</title>
-    <link>http://mcmullengreg.github.io/cascade-utilities/svg-sprite/</link>
+    <link>https://mcmullengreg.github.io/cascade-utilities/svg-sprite/</link>
     <description>Recent content in SVG Sprite on Cascade Utilities</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://mcmullengreg.github.io/cascade-utilities/svg-sprite/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://mcmullengreg.github.io/cascade-utilities/svg-sprite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Velocity Code</title>
-      <link>http://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</link>
+      <link>https://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</guid>
+      <guid>https://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</guid>
       <description>The below script may be used as is, see svg-sprite for more details. Copy    #import(&amp;#34;_versioning/_defaults&amp;#34;) #set ( $icons = $_.locateFolder(&amp;#34;/global-assets/social-icons&amp;#34;, $framework.get(&amp;#34;site&amp;#34;)) ) &amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt; #foreach ( $icon in $icons.getChildren() )  #cleanSVG($icon) #end &amp;lt;/svg&amp;gt; #macro ( cleanSVG $icon )  #set ( $iconId = $icon.label.toLowerCase().replaceAll(&amp;#34;\.&amp;#34;, &amp;#34;_&amp;#34; ) )  #set ( $icon = $icon.text )  #set ( $viewBox = &amp;#39;viewBox=&amp;#34;&amp;#39;) #set ( $startPos = $icon.indexOf($viewBox) ) #if ( $startPos &amp;gt; 0 ) #set ( $startPosExc = $startPos + $viewBox.</description>
     </item>
     
