@@ -33,6 +33,9 @@ and swapping the `svg` element for `symbol`.
 At the moment, SVG's should be placed into your Cascade CMS instance _without_ comments. Comments are not filtered out,
 but could be added to the list in your installation.
 
+ID's of the SVG sprite are based on the assets `.label`, lcased. Filenames are not stripped if Display Name or Title are
+not used. Therefore the default name could be `icon-name-svg`.
+
 ### Example SVG
 
 ```
@@ -40,3 +43,22 @@ but could be added to the list in your installation.
   <path|group|etc>
 </svg>
 ```
+
+## Using the Sprite
+
+To use the sprite, you'll use the `<use xlink:href="#icon-name"></use>`. Cascade CMS doesn't like this code, so make sure to
+wrap it with a `#protect`.
+
+```
+<svg class="whatever">
+  <!--#protect<use xlink:href="#icon-name"></use>#protect-->
+</svg>
+```
+
+## Resources
+
+* [A Pretty Good SVG Icon System](https://css-tricks.com/pretty-good-svg-icon-system/)
+* [Inline SVG...Cached](https://css-tricks.com/inline-svg-cached/)
+* [Why Inline SVG is Best SVG](https://css-tricks.com/inline-svg-best-svg/)
+* [How to Use SVG Image Sprites](https://www.sitepoint.com/use-svg-image-sprites/)
+* [5 Gotchas You're Gonna Face Getting Inline SVG Into Production](https://css-tricks.com/gotchas-on-getting-svg-into-production/)
