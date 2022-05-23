@@ -26,7 +26,7 @@ Your mileage may vary when utilizing any of this code. Use at your own risk.
         <p class="card-text text-muted">
           Add WordPress like shortcode functionality to your Cascade Site
         </p>
-        {{< button style="primary" link="svg-sprite" >}}Shortcodes &raquo;{{< /button >}}
+        {{< button style="primary" link="shortcodes" >}}Shortcodes &raquo;{{< /button >}}
       </div>
     </div>
   </div>
