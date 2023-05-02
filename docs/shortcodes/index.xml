@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://mcmullengreg.github.io/cascade-utilities/shortcodes/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Accordion</title>
+      <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/</guid>
+      <description>accordionsc allows for accordion content to be dropped onto a page, without the need for a full data definition. Basic Usage You will need to create an accordion block using Add Content &amp;gt; Blocks/Accordion. After which you will drop the following into the WYSIWYG editor.
+Copy    &amp;lt;p&amp;gt;[accodionsc path=&amp;#34;/_blocks/path-to-accordion&amp;#34;]&amp;lt;/p&amp;gt;    Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a p on the page prior to using the shortcode itself.</description>
+    </item>
+    
+    <item>
       <title>Do Shortcode</title>
       <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
