@@ -13,7 +13,17 @@
       
       <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/</guid>
       <description>accordionsc allows for accordion content to be dropped onto a page, without the need for a full data definition. Basic Usage You will need to create an accordion block using Add Content &amp;gt; Blocks/Accordion. After which you will drop the following into the WYSIWYG editor.
-Copy    &amp;lt;p&amp;gt;[accodionsc path=&amp;#34;/_blocks/path-to-accordion&amp;#34;]&amp;lt;/p&amp;gt;    Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a p on the page prior to using the shortcode itself.</description>
+Shortcode Copy    &amp;lt;p&amp;gt;[accordionsc path=&amp;#34;/_blocks/path-to-accordion&amp;#34;]&amp;lt;/p&amp;gt;    Notes Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a p on the page prior to using the shortcode itself.</description>
+    </item>
+    
+    <item>
+      <title>Gallery</title>
+      <link>https://mcmullengreg.github.io/cascade-utilities/shortcodes/gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mcmullengreg.github.io/cascade-utilities/shortcodes/gallery/</guid>
+      <description>gallery allows for image content to be dropped onto a page, without the need for additional code knowledge. Basic Usage To create a gallery, you will need to create a gallery block. The block will allow you to choose up to 6 items (4 items are the minimum for a &amp;ldquo;Masonic&amp;rdquo; type layout). Although an image carousel can also be selected, which will allow for images to be captioned.
+Shortcode Copy    &amp;lt;p&amp;gt;[gallery path=&amp;#34;/_blocks/path-to-gallery&amp;#34;]&amp;lt;/p&amp;gt;    Notes As previously stated, all shortcodes require a paragraph tag to surround the tag.</description>
     </item>
     
     <item>

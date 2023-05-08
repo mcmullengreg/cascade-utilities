@@ -1,6 +1,7 @@
 +++
 title = "Shortcode Template"
 description = ""
+weight = 1000
 +++
 
 {{<lead>}}

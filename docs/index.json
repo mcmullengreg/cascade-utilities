@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/",
+	"title": "Accordion",
+	"tags": null,
+	"description": "",
+	"content": "accordionsc allows for accordion content to be dropped onto a page, without the need for a full data definition. Basic Usage You will need to create an accordion block using Add Content \u0026gt; Blocks/Accordion. After which you will drop the following into the WYSIWYG editor.\nShortcode Copy    \u0026lt;p\u0026gt;[accordionsc path=\u0026#34;/_blocks/path-to-accordion\u0026#34;]\u0026lt;/p\u0026gt;    Notes Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a p on the page prior to using the shortcode itself.\nThe Cascade editor should show the p at the bottom of the editor window to indicate whether or not it is wrapped.\n"
+},
+{
 	"uri": "https://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/",
 	"title": "Velocity Code",
 	"tags": null,
@@ -7,25 +14,11 @@
 	"content": "The below script may be used as is, see svg-sprite for more details. Copy    #import(\u0026#34;_versioning/_defaults\u0026#34;) #set ( $icons = $_.locateFolder(\u0026#34;/global-assets/social-icons\u0026#34;, $framework.get(\u0026#34;site\u0026#34;)) ) \u0026lt;svg xmlns=\u0026#34;http://www.w3.org/2000/svg\u0026#34;\u0026gt; #foreach ( $icon in $icons.getChildren() )  #cleanSVG($icon) #end \u0026lt;/svg\u0026gt; #macro ( cleanSVG $icon )  #set ( $iconId = $icon.label.toLowerCase().replaceAll(\u0026#34;\\.\u0026#34;, \u0026#34;_\u0026#34; ) )  #set ( $icon = $icon.text )  #set ( $viewBox = \u0026#39;viewBox=\u0026#34;\u0026#39;) #set ( $startPos = $icon.indexOf($viewBox) ) #if ( $startPos \u0026gt; 0 ) #set ( $startPosExc = $startPos + $viewBox.length() ) #set ( $viewBoxValue = $icon.substring($startPosExc, $icon.indexOf(\u0026#39;\u0026#34;\u0026#39;, $startPosExc)) )  #end  #set ( $symbol = \u0026#39;\u0026lt;symbol viewBox=\u0026#34;\u0026#39; + ${viewBoxValue} + \u0026#39;\u0026#34; id=\u0026#34;\u0026#39;+ ${iconId} +\u0026#39;\u0026#34;\u0026#39; )  #set ( $icon = $icon.replaceAll(\u0026#34;\u0026lt;(/?)svg(.*\\s.*)?\u0026gt;\u0026#34;, \u0026#39;\u0026lt;$1symbol\u0026gt;\u0026#39;) )  #set ( $icon = $icon.replaceAll(\u0026#34;\u0026lt;title\u0026gt;(.*?)\u0026lt;/title\u0026gt;\u0026#34;, \u0026#34;\u0026#34;) )  #set ( $icon = $icon.replace(\u0026#34;\u0026lt;symbol\u0026#34;, $symbol) )  $icon #end    "
 },
 {
-	"uri": "https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/",
-	"title": "Accordion",
+	"uri": "https://mcmullengreg.github.io/cascade-utilities/shortcodes/gallery/",
+	"title": "Gallery",
 	"tags": null,
-	"description": "",
-	"content": "accordionsc allows for accordion content to be dropped onto a page, without the need for a full data definition. Basic Usage You will need to create an accordion block using Add Content \u0026gt; Blocks/Accordion. After which you will drop the following into the WYSIWYG editor.\nCopy    \u0026lt;p\u0026gt;[accodionsc path=\u0026#34;/_blocks/path-to-accordion\u0026#34;]\u0026lt;/p\u0026gt;    Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a p on the page prior to using the shortcode itself.\nThe Cascade editor should show the p at the bottom of the editor window to indicate whether or not it is wrapped.\n"
-},
-{
-	"uri": "https://mcmullengreg.github.io/cascade-utilities/",
-	"title": "Cascade Utilities",
-	"tags": null,
-	"description": "",
-	"content": "Documentation for various utilities for use within Cascade CMS by Hannon Hill.\nYour mileage may vary when utilizing any of this code. Use at your own risk.\nCurrent Projects   Shortcodes  Add WordPress like shortcode functionality to your Cascade Site Shortcodes »       SVG Sprites  A way to organize and inline your icons within a simple Cascade Folder. SVG Sprites »      "
-},
-{
-	"uri": "https://mcmullengreg.github.io/cascade-utilities/categories/",
-	"title": "Categories",
-	"tags": null,
-	"description": "",
-	"content": ""
+	"description": "Allowing for a gallery or a carousel layout, the gallery shortcode is quite versatile.",
+	"content": "gallery allows for image content to be dropped onto a page, without the need for additional code knowledge. Basic Usage To create a gallery, you will need to create a gallery block. The block will allow you to choose up to 6 items (4 items are the minimum for a \u0026ldquo;Masonic\u0026rdquo; type layout). Although an image carousel can also be selected, which will allow for images to be captioned.\nShortcode Copy    \u0026lt;p\u0026gt;[gallery path=\u0026#34;/_blocks/path-to-gallery\u0026#34;]\u0026lt;/p\u0026gt;    Notes As previously stated, all shortcodes require a paragraph tag to surround the tag. Content can be above or below the shortcode, but shortcodes should live on their own content line.\n"
 },
 {
 	"uri": "https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/",
@@ -49,11 +42,25 @@
 	"content": "This template file breaks down the basic code necessary for writing your first macro. Copy    #*  This page serves as a template and guide to developing and/or editing new shortcodes  Shortcodes should all be stored inside of the same site and folder, e.g. /macros/shortcodes/{name}.   The shortcode, file and macro names should match exactly. The name is used as a check to:  1. Import the macro file  2. \u0026#34;Name\u0026#34; the macro itself  3. Trigger a check for which macro to run (inside of do_shortcode)   e.g. #macro form ; shortcode is [form id=\u0026#34;\u0026#34;]; filename is form   Basic structure:  - Import the find_shortcode file, this allows you to search for a named shortcode.  - Write your macro/shortcode  - Use $contentString (or similar) to pass in the wysiwyg editor content. This is all that\u0026#39;s needed to be passed in  - Ensure you write out to $wysiwyg at the end of it all (setting the WYSIWYG editor to $wysiwyg, regardless of DD name or structured data is ideal)  - Update do_shortcode with your new entry *#  #macro ( _template $contentString )  ## Gets the starting position of the shortcode  ## Uses the curly brace, due to processing occurring higher in the chain  #set ( $startPosPar = $contentString.indexOf(\u0026#39;{_template\u0026#39;) )  ## IndexOf uses -1 if an item is not found; 0 or above if it is  #if ( $startPosPar \u0026gt; 0 )  ## Uses the String by Start and End macro to get the start and end of the shortcode  #set ( $shortCode = \u0026#34;#strByStartEnd($contentString, \u0026#39;{form\u0026#39;, \u0026#39;}\u0026#39;)\u0026#34; )  ## Sets the index of the closing brace for the shortcode  #set ( $endPos = $contentString.indexOf(\u0026#39;}\u0026#39;, $startPosPar) )  #set ( $endPos = $endPos + 1 )  ## Gets the full shortcode entity for additional processing  #set ( $fullShortCode = $contentString.substring($startPosPar, $endPos) )  ## Start processing additional attributes (use as many as needed for your shortcode)  ## The ending attribute, typically a double quote (\u0026#34;) #set ( $endAtt = \u0026#39;\u0026#34;\u0026#39; )  ## Your attributes, could be done differently, but this ensures we know what we get  #set ( $attStart1 = \u0026#39;att1=\u0026#34;\u0026#39; ) #set ( $attVal1 = \u0026#34;#strByStartEnd($shortCode, $attStart1, $endAtt)\u0026#34; ) #set ( $attStart2 = \u0026#39;att2=\u0026#34;\u0026#39; )  #set ( $attVal2 = \u0026#34;#strByStartEnd($shortCode, $attStart2, $endAtt)\u0026#34; )  ## After getting all of your values, you can then start building whatever code is needed. It\u0026#39;s recommend that you build it as a string, and replace whatever values are needed.  ## The code {att1}, {att2} are placeholders for the real content we want dropped in.  #set ( $embedCode = \u0026#39;\u0026lt;div id=\u0026#34;{att1}\u0026#34;\u0026gt;{att2}\u0026lt;/div\u0026gt;\u0026#39; )  ## If you have multiple instances of a replace, use replaceAll  #set ( $embedCode = $embedCode.replace(\u0026#34;\\{att1\\}\u0026#34;, $attVal1) )  #set ( $embedCode = $embedCode.replace(\u0026#34;\\{att2\\}\u0026#34;, $attVal2) )  ## Replace the HTML content with your updated $embedCode  #set ( $wysiwyg = $contentString.replace($fullShortCode, $embedCode) )   ## Don\u0026#39;t forget to update do_shortcode with a new elseif entry  #else ## Nothing was found, just pass it through (ensures we don\u0026#39;t try to process something that doesn\u0026#39;t need it ). Also sets the $wysiwyg variable to be output on the desired content format  #set ( $wysiwyg = $contentString )  #end #end    "
 },
 {
+	"uri": "https://mcmullengreg.github.io/cascade-utilities/",
+	"title": "Cascade Utilities",
+	"tags": null,
+	"description": "",
+	"content": "Documentation for various utilities for use within Cascade CMS by Hannon Hill.\nYour mileage may vary when utilizing any of this code. Use at your own risk.\nCurrent Projects   Shortcodes  Add WordPress like shortcode functionality to your Cascade Site Shortcodes »       SVG Sprites  A way to organize and inline your icons within a simple Cascade Folder. SVG Sprites »      "
+},
+{
+	"uri": "https://mcmullengreg.github.io/cascade-utilities/categories/",
+	"title": "Categories",
+	"tags": null,
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://mcmullengreg.github.io/cascade-utilities/shortcodes/",
 	"title": "Shortcodes",
 	"tags": null,
 	"description": "",
-	"content": "Shortcodes within Cascade CMS function similarly to those found in WordPress. The biggest difference is when they render.\nCascade CMS shortcodes will not automatically trigger in the WYSIWYG editor, but will once the page has been submitted from editing.\nHow to use Using a WYSIWYG editor, uses would type [shortcode var=\u0026quot;attribute\u0026quot;]. Following the template as a guide you can then process the WYSIWYG content to replace the shortcode with code that can use the variable. Such as:\n#macro ( shortcode $contentString )  ...  #set ( $attribute1 = #strByStartEnd($shortcode, \u0026#39;var=\u0026#34;, \u0026#39;\u0026#34;\u0026#39;) )  ## attribute1 would be \u0026#39;attribute\u0026#39; set within the shortcode  ...additional code... #end Use Cases  YouTube embeds: Instead of allowing users to embed content directly you can create a shortcode for how developers and brand ambassadors want these videos to be embedded on your site. Form embeds: Forms can be a nightmare, especially with Slate (for HighEdWebbers). Allow your users to only have to enter the form ID and you can handle the rest. Other Applications: Sometimes you just want to embed a Facebook post, Twitter feed or maybe process a CSV into an accessible table. This is what writing shortcodes can help with.  Code samples Accordion   Do Shortcode   Find Codes   Shortcode Template    "
+	"content": "Shortcodes within Cascade CMS function similarly to those found in WordPress. The biggest difference is when they render.\nCascade CMS shortcodes will not automatically trigger in the WYSIWYG editor, but will once the page has been submitted from editing.\nHow to use Using a WYSIWYG editor, uses would type [shortcode var=\u0026quot;attribute\u0026quot;]. Following the template as a guide you can then process the WYSIWYG content to replace the shortcode with code that can use the variable. Such as:\n#macro ( shortcode $contentString )  ...  #set ( $attribute1 = #strByStartEnd($shortcode, \u0026#39;var=\u0026#34;, \u0026#39;\u0026#34;\u0026#39;) )  ## attribute1 would be \u0026#39;attribute\u0026#39; set within the shortcode  ...additional code... #end Use Cases  YouTube embeds: Instead of allowing users to embed content directly you can create a shortcode for how developers and brand ambassadors want these videos to be embedded on your site. Form embeds: Forms can be a nightmare, especially with Slate (for HighEdWebbers). Allow your users to only have to enter the form ID and you can handle the rest. Other Applications: Sometimes you just want to embed a Facebook post, Twitter feed or maybe process a CSV into an accessible table. This is what writing shortcodes can help with.  Code samples Accordion   Gallery   Do Shortcode   Find Codes   Shortcode Template    "
 },
 {
 	"uri": "https://mcmullengreg.github.io/cascade-utilities/svg-sprite/",

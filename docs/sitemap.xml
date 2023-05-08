@@ -2,19 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</loc>
-  </url><url>
     <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/accordion/</loc>
   </url><url>
-    <loc>https://mcmullengreg.github.io/cascade-utilities/</loc>
+    <loc>https://mcmullengreg.github.io/cascade-utilities/svg-sprite/code/</loc>
   </url><url>
-    <loc>https://mcmullengreg.github.io/cascade-utilities/categories/</loc>
+    <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/gallery/</loc>
   </url><url>
     <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/</loc>
   </url><url>
     <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/default/</loc>
   </url><url>
     <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/template/</loc>
+  </url><url>
+    <loc>https://mcmullengreg.github.io/cascade-utilities/</loc>
+  </url><url>
+    <loc>https://mcmullengreg.github.io/cascade-utilities/categories/</loc>
   </url><url>
     <loc>https://mcmullengreg.github.io/cascade-utilities/shortcodes/</loc>
   </url><url>

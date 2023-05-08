@@ -74,6 +74,12 @@
                     Accordion
                 </a>
         </li>
+        <li data-nav-id="/cascade-utilities/shortcodes/gallery/" class="nav-item my-1">
+                
+                 <a href="/cascade-utilities/shortcodes/gallery/" class="nav-link p-0">
+                    Gallery
+                </a>
+        </li>
         <li data-nav-id="/cascade-utilities/shortcodes/do_shortcode/" class="nav-item my-1">
                 
                  <a href="/cascade-utilities/shortcodes/do_shortcode/" class="nav-link p-0">
@@ -114,7 +120,16 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-usage">Basic Usage</a>
+      <ul>
+        <li><a href="#shortcode">Shortcode</a></li>
+        <li><a href="#notes">Notes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
@@ -126,8 +141,9 @@
     <code>accordionsc</code> allows for accordion content to be dropped onto a page, without the need for a full data definition.
 </p>
 
-<h2>Basic Usage</h2>
+<h2 id="basic-usage">Basic Usage</h2>
 <p>You will need to create an accordion block using Add Content &gt; Blocks/Accordion. After which you will drop the following into the WYSIWYG editor.</p>
+<h3 id="shortcode">Shortcode</h3>
 
 
 
@@ -142,13 +158,13 @@
 
 <div class="position-relative">
     <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_6d3f0730bb">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_7b64135a83">
         Copy
         </button>
     </div>
-    <div id="clipboard_6d3f0730bb">
+    <div id="clipboard_7b64135a83">
     <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;[accodionsc path=&#34;/_blocks/path-to-accordion&#34;]&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;[accordionsc path=&#34;/_blocks/path-to-accordion&#34;]&lt;/<span style="color:#ff79c6">p</span>&gt;
 </span></span></code></pre></div>
     </div>
 </div>
@@ -156,6 +172,7 @@
 
 
 
+<h3 id="notes">Notes</h3>
 <p>Shortcodes require a paragraph tag to work successfully, so if this is the only item on the page, hit Enter to make sure you have a <code>p</code> on the page prior to using the shortcode itself.</p>
 <p>The Cascade editor should show the p at the bottom of the editor window to indicate whether or not it is wrapped.</p>
 
@@ -170,7 +187,7 @@
     <h4 class="text-white text-center">Read more</h4>
 
     <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/cascade-utilities/shortcodes/" title="Shortcodes"><i class="fas fa-chevron-left p-1"></i>Shortcodes</a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/cascade-utilities/shortcodes/do_shortcode/" title="Do Shortcode">Do Shortcode<i class="fas fa-chevron-right p-1"></i></a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/cascade-utilities/shortcodes/gallery/" title="Gallery">Gallery<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 

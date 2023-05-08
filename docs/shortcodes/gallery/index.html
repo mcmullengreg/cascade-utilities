@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="canonical" href="https://mcmullengreg.github.io/cascade-utilities/shortcodes/do_shortcode/">
+    <link rel="canonical" href="https://mcmullengreg.github.io/cascade-utilities/shortcodes/gallery/">
 
     <title>
         
-        Do Shortcode | Cascade Utilities
+        Gallery | Cascade Utilities
         
     </title>
 
@@ -74,13 +74,13 @@
                     Accordion
                 </a>
         </li>
-        <li data-nav-id="/cascade-utilities/shortcodes/gallery/" class="nav-item my-1">
+        <li data-nav-id="/cascade-utilities/shortcodes/gallery/" class="nav-item my-1 active">
                 
                  <a href="/cascade-utilities/shortcodes/gallery/" class="nav-link p-0">
                     Gallery
                 </a>
         </li>
-        <li data-nav-id="/cascade-utilities/shortcodes/do_shortcode/" class="nav-item my-1 active">
+        <li data-nav-id="/cascade-utilities/shortcodes/do_shortcode/" class="nav-item my-1">
                 
                  <a href="/cascade-utilities/shortcodes/do_shortcode/" class="nav-link p-0">
                     Do Shortcode
@@ -120,19 +120,30 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shortcode">Shortcode</a></li>
+      </ul>
+    </li>
+    <li><a href="#notes">Notes</a></li>
+  </ul>
+</nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
 
-<h1>Do Shortcode</h1>
+<h1>Gallery</h1>
 
 <p class="lead">
-    <code>do_shortcode</code> is the most basic macro within the entire set. While there are ways to enhance this functionality, the below
-sample will get you started.
+    <code>gallery</code> allows for image content to be dropped onto a page, without the need for additional code knowledge.
 </p>
 
+<h2>Basic Usage</h2>
+<p>To create a gallery, you will need to create a gallery block. The block will allow you to choose up to 6 items (4 items are the minimum for a &ldquo;Masonic&rdquo; type layout). Although an image carousel can also be selected, which will allow for images to be captioned.</p>
+<h3 id="shortcode">Shortcode</h3>
 
 
 
@@ -147,27 +158,13 @@ sample will get you started.
 
 <div class="position-relative">
     <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_9dce4758c0">
+        <button class="btn btn-light" data-clipboard-target="#clipboard_1d68820ad8">
         Copy
         </button>
     </div>
-    <div id="clipboard_9dce4758c0">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>#<span style="color:#ff79c6">*</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">*</span> Macro <span style="color:#50fa7b">do_shortcode</span> <span style="color:#ff79c6">(</span> $shortcodeName<span style="color:#ff79c6">,</span> $content <span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">*</span> Processes the actual shortcode<span style="color:#ff79c6">,</span> and attaches the macro to it
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">*</span>#
-</span></span><span style="display:flex;"><span>#macro <span style="color:#ff79c6">(</span> do_shortcode $shortcodeName<span style="color:#ff79c6">,</span> $content <span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>    #<span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span> $shortcodeName<span style="color:#ff79c6">.</span><span style="color:#50fa7b">contains</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;shortcodeName&#34;</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>      #shortcode<span style="color:#ff79c6">(</span>$content<span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>    ## This entry is an example<span style="color:#ff79c6">,</span> and should never be uncommented
-</span></span><span style="display:flex;"><span>    ##elseif <span style="color:#ff79c6">(</span> $shortcodeName<span style="color:#ff79c6">.</span><span style="color:#50fa7b">contains</span><span style="color:#ff79c6">(</span><span style="color:#f1fa8c">&#34;_template&#34;</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>      ##_template<span style="color:#ff79c6">(</span>$content<span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>    #<span style="color:#ff79c6">else</span>
-</span></span><span style="display:flex;"><span>        #set <span style="color:#ff79c6">(</span> $wysiwyg <span style="color:#ff79c6">=</span> $content <span style="color:#ff79c6">)</span>
-</span></span><span style="display:flex;"><span>        ## I&#39;m the <span style="color:#ff79c6">else</span><span style="color:#ff79c6">...</span><span style="color:#50fa7b">I</span> run <span style="color:#ff79c6">if</span> no shortcodes exist<span style="color:#ff79c6">.</span>
-</span></span><span style="display:flex;"><span>    #end
-</span></span><span style="display:flex;"><span>#end
+    <div id="clipboard_1d68820ad8">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">p</span>&gt;[gallery path=&#34;/_blocks/path-to-gallery&#34;]&lt;/<span style="color:#ff79c6">p</span>&gt;
 </span></span></code></pre></div>
     </div>
 </div>
@@ -175,6 +172,8 @@ sample will get you started.
 
 
 
+<h2 id="notes">Notes</h2>
+<p>As previously stated, all shortcodes require a paragraph tag to surround the tag. Content can be above or below the shortcode, but shortcodes should live on their own content line.</p>
 
 
     
@@ -186,8 +185,8 @@ sample will get you started.
 
     <h4 class="text-white text-center">Read more</h4>
 
-    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/cascade-utilities/shortcodes/gallery/" title="Gallery"><i class="fas fa-chevron-left p-1"></i>Gallery</a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/cascade-utilities/shortcodes/default/" title="Find Codes">Find Codes<i class="fas fa-chevron-right p-1"></i></a>
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/cascade-utilities/shortcodes/accordion/" title="Accordion"><i class="fas fa-chevron-left p-1"></i>Accordion</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/cascade-utilities/shortcodes/do_shortcode/" title="Do Shortcode">Do Shortcode<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 
